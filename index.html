@@ -64,8 +64,11 @@
             color: var(--amber);
             letter-spacing: -0.5px;
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
         .nav-logo span { color: var(--white); }
+        .nav-logo img { height: 50px; margin-right: 10px; }
 
         .nav-links {
             display: flex;
@@ -324,29 +327,10 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.3);
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--amber), var(--amber-light));
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .service-card:hover::before { opacity: 1; }
-
-        .service-icon {
-            width: 56px;
-            height: 56px;
-            background: var(--amber-glow);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .service-card img, .service-card video {
+            width: 100%;
+            border-radius: 10px;
             margin-bottom: 1.5rem;
-            font-size: 1.5rem;
         }
 
         .service-card h3 {
@@ -389,26 +373,6 @@
             transition: transform 0.5s ease;
         }
         .gallery-item:hover img { transform: scale(1.06); }
-
-        .gallery-placeholder {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            color: var(--gray-400);
-            gap: 0.75rem;
-        }
-        .gallery-placeholder svg {
-            width: 40px;
-            height: 40px;
-            stroke: var(--gray-600);
-        }
-        .gallery-placeholder span {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
 
         /* ===== CONTACT ===== */
         .contact {
@@ -599,16 +563,16 @@
         @media (max-width: 480px) {
             .gallery-grid { grid-template-columns: 1fr; }
         }
-    
-        
-
     </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="navbar">
-    <a href="#" class="nav-logo"><img src="images/goatlogo.png" alt="Logo" style="height: 50px; vertical-align: middle; margin-right: 10px;">PREMIER<span>ELECTRIC</span></a>
+    <a href="#" class="nav-logo">
+        <img src="images/goatlogo.png" alt="Logo">
+        PREMIER<span>ELECTRIC</span>
+    </a>
     <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Our Work</a></li>
@@ -626,7 +590,7 @@
     <div class="hero-content">
         <div class="hero-badge">Licensed &amp; Insured</div>
         <h1>Commercial &amp;<br>Residential <span class="highlight">Electrical</span> Services</h1>
-        <p class="hero-sub">From panel upgrades to EV charger installations â€” we deliver safe, reliable electrical work for homes and businesses across the DFW metroplex.</p>
+        <p class="hero-sub">From panel upgrades to EV charger installations — we deliver safe, reliable electrical work for homes and businesses across the DFW metroplex.</p>
         <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
@@ -661,31 +625,38 @@
     <div class="services-grid">
 
         <div class="service-card">
-            <div class="service-video"><video width="100%" height="auto" autoplay muted loop style="border-radius:10px; margin-bottom:1rem;"><source src="video1.mp4" type="video/mp4"></video></div>
+            <img src="images/big%20array.png" alt="Commercial Electrical">
             <h3>Commercial Electrical</h3>
-            <p>Complete commercial electrical solutions â€” new construction wiring, tenant improvements, code compliance upgrades, and full-building power distribution systems.</p>
+            <p>Complete commercial electrical solutions — new construction wiring, tenant improvements, code compliance upgrades, and full-building power distribution systems.</p>
         </div>
 
         <div class="service-card">
-            <img src="IMG_0603.jpeg" style="width:100%; border-radius:10px; margin-bottom:1rem;">
+            <img src="IMG_0603.jpeg" alt="Electrical Panels">
             <h3>Electrical Panels &amp; Draws</h3>
             <p>Service panel upgrades, meter base installations, 200A and 400A draws, and load center replacements. We handle the utility coordination for you.</p>
         </div>
 
         <div class="service-card">
-            <div class="service-video"><video width="100%" height="auto" autoplay muted loop style="border-radius:10px; margin-bottom:1rem;"><source src="video2.mp4" type="video/mp4"></video></div>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.5rem;">
+                <video autoplay muted loop playsinline style="border-radius: 10px;">
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+                <video autoplay muted loop playsinline style="border-radius: 10px;">
+                    <source src="video2.mp4" type="video/mp4">
+                </video>
+            </div>
             <h3>Detach &amp; Reset</h3>
             <p>Professional meter and panel detach and reset services for roof replacements, siding work, and structural renovations. Fast turnaround, fully permitted.</p>
         </div>
 
         <div class="service-card">
-            <div class="service-icon">ðŸ› ï¸</div>
+            <div class="service-icon" style="width: 56px; height: 56px; background: var(--amber-glow); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🛠️</div>
             <h3>Maintenance &amp; Troubleshooting</h3>
             <p>Diagnostic troubleshooting for circuits, breakers, outlets, and wiring issues. Preventive maintenance programs for commercial properties.</p>
         </div>
 
         <div class="service-card">
-            <div class="service-icon">ðŸš—</div>
+            <div class="service-icon" style="width: 56px; height: 56px; background: var(--amber-glow); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem;">🚗</div>
             <h3>EV Charger Installation</h3>
             <p>Level 2 home and commercial EV charger installations. We handle the panel capacity assessment, dedicated circuit run, and charger mounting.</p>
         </div>
@@ -700,20 +671,18 @@
         <h2 class="section-title">Our Work</h2>
         <p class="section-desc">See the quality of our craftsmanship across commercial and residential projects.</p>
     </div>
-            <div class="gallery-grid">
+    <div class="gallery-grid">
         <div class="gallery-item">
-            <img src="IMG_2895.jpeg" alt="Recent Projects">
+            <img src="images/commercialsolar2.jpg" alt="Commercial Solar">
         </div>
         <div class="gallery-item">
-            <img src="IMG_0603.jpeg" alt="Electrical Panel Work">
+            <img src="IMG_2895.jpeg" alt="Recent Projects">
         </div>
         <div class="gallery-item">
             <img src="View recent photos.png" alt="Recent Projects Overview">
         </div>
     </div>
-    </div>
-    </div>
-    </section>
+</section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
@@ -725,27 +694,27 @@
     <div class="contact-wrapper">
         <div class="contact-info">
             <h3>Let's talk about your project.</h3>
-            <p>Whether it's a commercial build-out, a panel upgrade, or an EV charger install â€” reach out and we'll provide a free estimate.</p>
+            <p>Whether it's a commercial build-out, a panel upgrade, or an EV charger install — reach out and we'll provide a free estimate.</p>
 
             <div class="contact-detail">
-                <div class="contact-detail-icon">ðŸ“ž</div>
+                <div class="contact-detail-icon">📞</div>
                 <div class="contact-detail-text">
                     <div class="label">Phone</div>
                     <a href="tel:+18177606709">817-760-6709</a>
                 </div>
             </div>
             <div class="contact-detail">
-                <div class="contact-detail-icon">âœ‰ï¸</div>
+                <div class="contact-detail-icon">✉️</div>
                 <div class="contact-detail-text">
                     <div class="label">Email</div>
                     <a href="mailto:solargurusdfw@gmail.com">solargurusdfw@gmail.com</a>
                 </div>
             </div>
             <div class="contact-detail">
-                <div class="contact-detail-icon">ðŸ“</div>
+                <div class="contact-detail-icon">📍</div>
                 <div class="contact-detail-text">
                     <div class="label">Service Area</div>
-                    <span>Dallasâ€“Fort Worth Metroplex</span>
+                    <span>Dallas–Fort Worth Metroplex</span>
                 </div>
             </div>
         </div>
@@ -753,7 +722,7 @@
         <div class="contact-form" id="contactForm">
             <h4>Send us a message</h4>
             <form id="quoteForm" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                <p class="hidden" style="display:none;"><label>Donâ€™t fill this out if youâ€™re human: <input name="bot-field" /></label></p>`n                <input type="hidden" name="form-name" value="quote">
+                <p class="hidden" style="display:none;"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
                 <input type="hidden" name="form-name" value="quote">
                 <div class="form-row">
                     <div class="form-group">
@@ -820,26 +789,24 @@
         });
     });
 
-    // Form submission
-    function handleSubmit(e) {
-        e.preventDefault();
-        const form = e.target;
-        const data = new FormData(form);
-
-        // Log form data (replace with actual endpoint or email service)
-        const submission = {};
-        data.forEach((val, key) => submission[key] = val);
-        console.log('Quote request:', submission);
-
-        // Show success
-        form.style.display = 'none';
-        document.querySelector('#contactForm h4').style.display = 'none';
-        document.getElementById('formSuccess').classList.add('show');
-
-        // In production, send to:
-        // - Formspree (free): action="https://formspree.io/f/YOUR_ID" 
-        // - Netlify Forms: add netlify attribute to <form>
-        // - EmailJS for direct email delivery
+    // Form submission using Netlify AJAX
+    const quoteForm = document.getElementById('quoteForm');
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(quoteForm);
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+                quoteForm.style.display = 'none';
+                document.querySelector('#contactForm h4').style.display = 'none';
+                document.getElementById('formSuccess').classList.add('show');
+            })
+            .catch((error) => alert(error));
+        });
     }
 
     // Scroll reveal animation
@@ -862,14 +829,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
