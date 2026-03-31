@@ -1,0 +1,43 @@
+﻿SERVICE AGREEMENT: PREMIER ELECTRIC SITE
+
+Date: March 31, 2026
+
+Parties:
+- Service Provider: Christopher McMahon (SVA)
+- Client: Peter (Premiere Electric)
+
+Peter has agreed to pay for hosting and SEO optimzation services from Christopher McMahon (SVA) for PREMIER ELECTRIC
+
+
+1. INVESTMENT & FEES
+A. UPFRONT COST: $500.00
+   - Billing begins today, March 31st, 2026.
+   - This covers the initial build, design, and deployment of the Premiere Electric website.
+B. RECURRING SERVICE FEE: $50.00 / Month
+   - First recurring payment is due on May 1st, 2026.
+   - For continued support, hosting, domain management, and SEO optimization.
+
+LEGAL NOTICE:
+This agreement formalizes our verbal commitment, which holds legal weight in the State of Texas.
+2. SERVICES PROVIDED
+Provider agrees to deliver and maintain a professional, high-performance website including:
+- Initial design, development, and ongoing SEO optimization.
+- Integration of custom media (photos/videos) as provided by Client.
+- Set up and maintenance of lead generation forms.
+- Custom domain setup and SSL security configuration.
+- Creation of custom assests
+
+3. OWNERSHIP & INFRASTRUCTURE
+- Provider maintains ownership and control of the source code and deployment infrastructure (GitHub/Netlify).
+- Client maintains ownership of all brand assets, logos, and specific project content provided.
+- Provider will manage the custom domain on behalf of Client.
+
+4. CANCELLATION & TERMINATION
+- Either party may terminate this agreement with 30 days' notice.
+- In the event of non-payment of the Recurring Service Fee, Provider reserves the right to suspend the website's live status until the balance is resolved.
+
+
+CHRISTOPHER MCMAHON S V A 
+CMFLTX@GMAIL.COM
+945-301-2153
+
