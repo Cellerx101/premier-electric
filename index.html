@@ -125,10 +125,9 @@
         .hero-bg {
             position: absolute;
             inset: 0;
-            background:
-                radial-gradient(ellipse 80% 60% at 70% 40%, rgba(245, 166, 35, 0.08) 0%, transparent 60%),
-                radial-gradient(ellipse 60% 80% at 20% 80%, rgba(26, 45, 77, 0.6) 0%, transparent 50%),
-                var(--navy);
+            background: linear-gradient(rgba(10, 22, 40, 0.5), rgba(10, 22, 40, 0.5)), url('images/big%20array.png');
+            background-size: cover;
+            background-position: center;
         }
 
         .hero-grid-pattern {
@@ -701,15 +700,12 @@
         <h2 class="section-title">Our Work</h2>
         <p class="section-desc">See the quality of our craftsmanship across commercial and residential projects.</p>
     </div>
-    <div class="gallery-grid">
+        <div class="gallery-grid">
         <div class="gallery-item">
             <img src="IMG_0603.jpeg" alt="Electrical Project">
         </div>
         <div class="gallery-item">
-            <img src="IMG_2895.jpeg" alt="Massive Ground Array">
-        </div>
-        <div class="gallery-item">
-            <img src="View recent photos.png" alt="Recent Projects Overview">
+            <img src="IMG_2895.jpeg" alt="Recent Projects">
         </div>
         <div class="gallery-item">
             <video width="100%" height="100%" style="object-fit: cover;" controls>
@@ -723,6 +719,7 @@
                 Your browser does not support the video tag.
             </video>
         </div>
+    </div>
     </div>
     </section>
 
@@ -872,6 +869,7 @@
 
 </body>
 </html>
+
 
 
 
